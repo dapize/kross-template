@@ -1,3 +1,33 @@
+<script setup>
+import avatar from '../assets/images/testimonial/client-1.png';
+
+import { Pagination, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+import 'swiper/css';
+
+const testimonials = [
+  {
+    author: 'Jesica Gomez',
+    role: 'CEO, Funder',
+    testimony: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    avatar
+  },
+  {
+    author: 'Jesica Gomez',
+    role: 'CEO, Funder',
+    testimony: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    avatar
+  },
+  {
+    author: 'Jesica Gomez',
+    role: 'CEO, Funder',
+    testimony: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    avatar
+  }
+]
+const modules = [Pagination, A11y];
+</script>
 <template>
   <section class="section bg-primary position-relative testimonial-bg-shapes">
     <div class="container">
@@ -10,6 +40,7 @@
             :modules="modules"
             :slides-per-view="1"
             :pagination="{ clickable: true }"
+            :loop="true"
           >
             <SwiperSlide class="text-center testimonial-content" v-for="(item, index) in testimonials" :key="index">
               <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
@@ -31,47 +62,6 @@
     <img src="../assets/images/illustrations/leaf-cyan.png" alt="bg-shape" class="img-fluid bg-shape-5">
   </section>
 </template>
-<script>
-import avatar from '../assets/images/testimonial/client-1.png';
-
-import { Pagination, A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-
-import 'swiper/css';
-
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    const testimonials = [
-      {
-        author: 'Jesica Gomez',
-        role: 'CEO, Funder',
-        testimony: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        avatar
-      },
-      {
-        author: 'Jesica Gomez',
-        role: 'CEO, Funder',
-        testimony: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        avatar
-      },
-      {
-        author: 'Jesica Gomez',
-        role: 'CEO, Funder',
-        testimony: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        avatar
-      }
-    ]
-    return {
-      testimonials,
-      modules: [Pagination, A11y ],
-    }
-  }
-}
-</script>
 <style>
 .swiper-pagination {
   text-align: center;

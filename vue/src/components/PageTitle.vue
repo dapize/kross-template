@@ -1,3 +1,25 @@
+<script setup>
+import { computed } from 'vue';
+const props = defineProps({
+  align: {
+    type: String,
+    default: 'left'
+  }
+})
+
+const themeClass = computed(() => {
+  return props.align === 'left' ? 'page-title-alt' : 'page-title';
+});
+
+const alignTitle = computed(() => {
+  switch(props.align) {
+    case 'left':
+      return '';
+    case 'center':
+      return 'text-center'
+  }
+})
+</script>
 <template>
   <section class="bg-primary position-relative" :class="themeClass">
     <div class="container">
@@ -26,26 +48,4 @@
     </template>
   </section>
 </template>
-<script>
-export default {
-  props: {
-    align: {
-      type: String,
-      default: 'left'
-    }
-  },
-  computed: {
-    themeClass() {
-      return this.align === 'left' ? 'page-title-alt' : 'page-title';
-    },
-    alignTitle() {
-      switch(this.align) {
-        case 'left':
-          return '';
-        case 'center':
-          return 'text-center'
-      }
-    }
-  }
-}
-</script>
+

@@ -15,7 +15,7 @@ p, .paragraph {
   line-height: 1.8;
   font-family: "Roboto", sans-serif;
 }
-p-lg, .paragraph-lg {
+.paragraph-lg {
   font-size: 22px;
 }
 

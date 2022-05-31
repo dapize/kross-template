@@ -9,45 +9,54 @@ import Portfolio from '../views/Portfolio.vue';
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    name: 'Home',
+    component: Home,
   },
   {
     path: '/about',
-    name: 'about',
+    name: 'About',
     component: About
   },
   {
     path: '/blog',
-    name: 'blog',
+    name: 'Blog',
     component: Blog
   },
   {
     path: '/blog/:path',
-    name: 'post',
+    name: 'Post',
     component: Post
   },
   {
     path: '/portfolio',
-    name: 'portfolio',
+    name: 'Portfolio',
     component: Portfolio
   },
   {
     path: '/contact',
-    name: 'contact',
+    name: 'Contact',
     component: Contact
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+  routes,
   scrollBehavior(to) {
-    return {
-      el: to.hash || '#main-header',
-      behavior: 'smooth',
+    const objToReturn = {
+      top: 0,
+      behavior: 'smooth'
+    };
+    if ( to.hash === '#post') {
+      objToReturn.el = to.hash,
+      objToReturn.top = 35;
     }
+    return objToReturn
   },
-  routes
+});
+
+router.afterEach((to) => {
+  document.title = to.name + ' | Kross Creative';
 })
 
 export default router

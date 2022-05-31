@@ -1,3 +1,27 @@
+<script setup>
+import Plan from '../assets/images/icons/plan.png';
+import Design from '../assets/images/icons/design.png';
+import Print from '../assets/images/icons/print.png';
+
+const processes = [
+  {
+    title: 'Research and Plan',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    img: Plan
+  },
+  {
+    title: 'Design and Develop',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    img: Design
+  },
+  {
+    title: 'Deliver',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    img: Print
+  }
+];
+</script>
+
 <template>
   <section class="section">
     <div class="container">
@@ -14,32 +38,3 @@
     </div>
   </section>
 </template>
-<script>
-import Plan from '../assets/images/icons/plan.png';
-import Design from '../assets/images/icons/design.png';
-import Print from '../assets/images/icons/print.png';
-
-export default {
-  setup() {
-    return {
-      processes: [
-        {
-          title: 'Research and Plan',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          img: Plan
-        },
-        {
-          title: 'Design and Develop',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          img: Design
-        },
-        {
-          title: 'Deliver',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          img: Print
-        }
-      ]
-    }
-  }
-}
-</script>

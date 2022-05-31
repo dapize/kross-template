@@ -1,19 +1,19 @@
+<script setup>
+const currentYear = new Date().getFullYear();
+const data = [
+  { title: 'Email', content: 'steve.fruits@email.com'},
+  { title: 'Phone', content: '+880 2544 658 256'},
+  { title: 'Address', content: '125/A, CA Commercial Area, California, USA'},
+]
+</script>
 <template>
   <footer class="bg-dark footer-section">
     <div class="section">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <h5 class="text-light">Email</h5>
-            <p class="text-white paragraph-lg font-secondary">steve.fruits@email.com</p>
-          </div>
-          <div class="col-md-4">
-            <h5 class="text-light">Phone</h5>
-            <p class="text-white paragraph-lg font-secondary">+880 2544 658 256</p>
-          </div>
-          <div class="col-md-4">
-            <h5 class="text-light">Address</h5>
-            <p class="text-white paragraph-lg font-secondary">125/A, CA Commercial Area, California, USA</p>
+          <div class="col-md-4" v-for="(item, index) in data" :key="index">
+            <h5 class="text-light">{{ item.title }}</h5>
+            <p class="text-white paragraph-lg font-secondary">{{ item.content }}</p>
           </div>
         </div>
       </div>
@@ -23,22 +23,3 @@
     </div>
   </footer>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      currentYear: null
-    }
-  },
-  methods: {
-    getCurrentYear() {
-      return new Date().getFullYear()
-    }
-  },
-  created() {
-    this.currentYear = this.getCurrentYear();
-  }
-}
-</script>
-<style>
-</style>

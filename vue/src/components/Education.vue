@@ -1,4 +1,28 @@
-<template lang="">
+<script setup>
+const learnings = [
+  {
+    title: 'Marters in UX Design',
+    year: 2006,
+    institution: 'Masassusets Institute of Technology'
+  },
+  {
+    title: 'Honours in Fine Arts',
+    year: 2004,
+    institution: 'Harvard University'
+  },
+  {
+    title: 'Higher Secondary Certificat',
+    year: 2000,
+    institution: 'Cardiff School'
+  },
+  {
+    title: 'Secondary School Certificate',
+    year: 1998,
+    institution: 'Cardiff School'
+  }
+]
+</script>
+<template>
   <section class="section position-relative">
     <div class="container">
       <div class="row">
@@ -19,37 +43,6 @@
         </div>
       </div>
     </div>
-    <!-- bg image -->
     <img class="img-fluid edu-bg-image w-100" src="../assets/images/backgrounds/education-bg.png" alt="bg-image">
   </section>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      learnings: [
-        {
-          title: 'Marters in UX Design',
-          year: 2006,
-          institution: 'Masassusets Institute of Technology'
-        },
-        {
-          title: 'Honours in Fine Arts',
-          year: 2004,
-          institution: 'Harvard University'
-        },
-        {
-          title: 'Higher Secondary Certificat',
-          year: 2000,
-          institution: 'Cardiff School'
-        },
-        {
-          title: 'Secondary School Certificate',
-          year: 1998,
-          institution: 'Cardiff School'
-        }
-      ]
-    }
-  }
-}
-</script>

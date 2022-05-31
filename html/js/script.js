@@ -69,7 +69,6 @@
             event = event || window.event;
             var x = event.clientX - parallaxBox.offsetLeft,
                 y = event.clientY - parallaxBox.offsetTop;
-
             /*  mouseParallax('l1', c1left, c1top, x, y, 5); */
             mouseParallax('l2', c2left, c2top, x, y, 25);
             mouseParallax('l3', c3left, c3top, x, y, 20);

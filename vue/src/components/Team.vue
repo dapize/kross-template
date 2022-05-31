@@ -1,3 +1,14 @@
+<script setup>
+import Member1 from '../assets/images/team/member-1.png';
+import Member2 from '../assets/images/team/member-2.png';
+import Member3 from '../assets/images/team/member-3.png';
+
+const members = [
+  { name: 'Jack Schenziwe', role: 'Project Manager', image: Member1 },
+  { name: 'Jack Schenziwe', role: 'Project Manager', image: Member2 },
+  { name: 'Jack Schenziwe', role: 'Project Manager', image: Member3 }
+]
+</script>
 <template>
   <section class="section bg-cover bg-image">
     <div class="container">
@@ -18,23 +29,6 @@
     </div>
   </section>
 </template>
-<script>
-import Member1 from '../assets/images/team/member-1.png';
-import Member2 from '../assets/images/team/member-2.png';
-import Member3 from '../assets/images/team/member-3.png';
-
-export default {
-  setup() {
-    return {
-      members: [
-        { name: 'Jack Schenziwe', role: 'Project Manager', image: Member1 },
-        { name: 'Jack Schenziwe', role: 'Project Manager', image: Member2 },
-        { name: 'Jack Schenziwe', role: 'Project Manager', image: Member3 }
-      ]
-    }
-  }
-}
-</script>
 <style scoped>
   .bg-image {
     background-image: url('../assets/images/backgrounds/team-bg.png');
