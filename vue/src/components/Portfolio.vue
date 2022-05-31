@@ -108,3 +108,12 @@ onMounted(() => {
     </div>
   </section>
 </template>
+<style>
+@media screen and (max-width: 479px) {
+  .btn-primary {
+    font-size:  13px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+</style>

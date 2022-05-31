@@ -48,4 +48,9 @@ const alignTitle = computed(() => {
     </template>
   </section>
 </template>
-
+<style scoped>
+section {
+  max-width: 100vw;
+  overflow: hidden;
+}
+</style>
