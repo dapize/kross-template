@@ -2,6 +2,8 @@
 node_modules/
 vue/dist/
 vue/node_modules/
+next/node_modules/
+next/.next/
 
 # local env files
 .env.local
