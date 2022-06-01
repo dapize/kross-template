@@ -1,6 +1,7 @@
 <script setup>
 import avatar from '../assets/images/testimonial/client-1.png';
 
+
 import { Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
@@ -45,7 +46,7 @@ const modules = [Pagination, A11y];
             <SwiperSlide class="text-center testimonial-content" v-for="(item, index) in testimonials" :key="index">
               <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
               <p class="text-white mb-4" v-html="item.testimony"></p>
-              <img class="img-fluid rounded-circle mb-4 d-inline-block" :src="item.avatar" alt="client-image">
+              <img :src="item.avatar" class="img-fluid rounded-circle mb-4 d-inline-block" alt="client-image" />
               <h4 class="text-white">{{item.author}}</h4>
               <h6 class="text-light mb-4">{{item.role}}</h6>
             </SwiperSlide>
@@ -54,12 +55,12 @@ const modules = [Pagination, A11y];
       </div>
     </div>
     <!-- bg shapes -->
-    <img src="../assets/images/backgrounds/map.png" alt="map" class="img-fluid bg-map">
-    <img src="../assets/images/illustrations/dots-group-v.png" alt="bg-shape" class="img-fluid bg-shape-1">
-    <img src="../assets/images/illustrations/leaf-orange.png" alt="bg-shape" class="img-fluid bg-shape-2">
-    <img src="../assets/images/illustrations/dots-group-sm.png" alt="bg-shape" class="img-fluid bg-shape-3">
-    <img src="../assets/images/illustrations/leaf-pink-round.png" alt="bg-shape" class="img-fluid bg-shape-4">
-    <img src="../assets/images/illustrations/leaf-cyan.png" alt="bg-shape" class="img-fluid bg-shape-5">
+    <img src="../assets/images/backgrounds/map.png" alt="map" class="img-fluid bg-map" />
+    <img src="../assets/images/illustrations/dots-group-v.png" alt="bg-shape" class="img-fluid bg-shape-1" />
+    <img src="../assets/images/illustrations/leaf-orange.png" alt="bg-shape" class="img-fluid bg-shape-2" />
+    <img src="../assets/images/illustrations/dots-group-sm.png" alt="bg-shape" class="img-fluid bg-shape-3" />
+    <img src="../assets/images/illustrations/leaf-pink-round.png" alt="bg-shape" class="img-fluid bg-shape-4" />
+    <img src="../assets/images/illustrations/leaf-cyan.png" alt="bg-shape" class="img-fluid bg-shape-5" />
   </section>
 </template>
 <style>

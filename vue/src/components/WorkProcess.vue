@@ -3,6 +3,7 @@ import Plan from '../assets/images/icons/plan.png';
 import Design from '../assets/images/icons/design.png';
 import Print from '../assets/images/icons/print.png';
 
+
 const processes = [
   {
     title: 'Research and Plan',
@@ -30,7 +31,7 @@ const processes = [
           <h2 class="section-title">Work Process</h2>
         </div>
         <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3" v-for="(process, index) in processes" :key="index">
-          <img :src="process.img" class="mb-4" alt="icon">
+          <img :src="process.img" class="mb-4" alt="icon" />
           <h4 class="mb-4">{{process.title}}</h4>
           <p>{{process.description}}</p>
         </div>

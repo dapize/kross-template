@@ -1,4 +1,6 @@
 <script setup>
+
+
 const learnings = [
   {
     title: 'Marters in UX Design',
@@ -43,6 +45,6 @@ const learnings = [
         </div>
       </div>
     </div>
-    <img class="img-fluid edu-bg-image w-100" src="../assets/images/backgrounds/education-bg.png" alt="bg-image">
+    <img src="../assets/images/backgrounds/education-bg.png" class="img-fluid edu-bg-image w-100" alt="bg-image" />
   </section>
 </template>

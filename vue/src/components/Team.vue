@@ -3,6 +3,7 @@ import Member1 from '../assets/images/team/member-1.png';
 import Member2 from '../assets/images/team/member-2.png';
 import Member3 from '../assets/images/team/member-3.png';
 
+
 const members = [
   { name: 'Jack Schenziwe', role: 'Project Manager', image: Member1 },
   { name: 'Jack Schenziwe', role: 'Project Manager', image: Member2 },
@@ -18,7 +19,7 @@ const members = [
         </div>
         <div class="col-md-4 col-sm-6 mb-4 mb-md-0" v-for="(member, index) in members" :keys="index">
           <div class="card text-center">
-            <img :src="member.image" class="card-img-top">
+            <img :src="member.image" class="card-img-top" />
             <div class="card-body">
               <h4 class="card-title">{{member.name}}</h4>
               <p class="text-light font-secondary">{{member.role}}</p>

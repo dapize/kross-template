@@ -4,6 +4,7 @@ import Post2 from '../assets/images/blog/post-2.jpg';
 import Post3 from '../assets/images/blog/post-3.jpg';
 import Post4 from '../assets/images/blog/post-4.jpg';
 
+
 const posts = [
   {
     image: Post5,
@@ -49,7 +50,7 @@ const posts = [
       <div class="row">
         <div class="col-lg-4 col-sm-6 mb-4" v-for="(post, index) in posts" :keys="index">
           <article class="card shadow">
-            <img class="rounded card-img-top" :src="post.image" alt="post-thumb">
+            <img :src="post.image" class="rounded card-img-top" alt="post-thumb" />
             <div class="card-body">
               <h4 class="card-title">
                 <a class="text-dark" href="blog-single.html">

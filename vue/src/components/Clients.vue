@@ -3,6 +3,7 @@ import { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css/autoplay';
 
+
 import logo1 from '../assets/images/clients-logo/client-logo-1.png';
 import logo2 from '../assets/images/clients-logo/client-logo-2.png';
 import logo3 from '../assets/images/clients-logo/client-logo-3.png';
@@ -58,7 +59,7 @@ defineProps({
                 class="text-center d-block outline-0 p-4"
                 v-for="(item, index) in logos" :key="index"
               >
-                <img class="d-unset img-fluid" :src="item" alt="client-logo">
+                <img class="d-unset img-fluid" :src="item" alt="client-logo" />
               </SwiperSlide>
             </Swiper>
           </div>

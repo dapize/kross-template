@@ -2,6 +2,7 @@
 import Shuffle from 'shufflejs';
 import { onMounted, ref, computed } from 'vue';
 
+
 const props = defineProps({
   title: {
     type: Boolean,
@@ -96,7 +97,7 @@ onMounted(() => {
           :data-groups="project.groups"
         >
           <div class="position-relative rounded hover-wrapper">
-            <img :src="project.image" alt="portfolio-image" class="img-fluid rounded w-100">
+            <img :src="project.image" alt="portfolio-image" class="img-fluid rounded w-100" />
             <div class="hover-overlay">
               <div class="hover-content">
                 <a class="btn btn-light btn-sm" href="#!">view project</a>

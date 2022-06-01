@@ -437,6 +437,12 @@ textarea.form-control {
   right: -150px;
 }
 
+@media (pointer: coarse) {
+  #l5 {
+    right: 0
+  }
+}
+
 #l6 {
   bottom: -20px;
   left: 10%;
@@ -455,6 +461,12 @@ textarea.form-control {
 #l9 {
   bottom: 100px;
   right: -10px;
+}
+
+@media (pointer: coarse) {
+  #l9 {
+    right: 0
+  }
 }
 
 .layer-bg {

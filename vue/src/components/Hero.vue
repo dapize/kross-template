@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
+
 const section = ref(null);
 const l2 = ref(null);
 const l3 = ref(null);
@@ -52,28 +53,30 @@ const onMouseMove = (e) => {
 };
 
 onMounted(() => {
-  setTimeout(() => {
-    c2left.value = l2.value.offsetLeft;
-    c2top.value = l2.value.offsetTop;
-    c3left.value = l3.value.offsetLeft;
-    c3top.value = l3.value.offsetTop;
-    c4left.value = l4.value.offsetLeft;
-    c4top.value = l4.value.offsetTop;
-    c5left.value = l5.value.offsetLeft;
-    c5top.value = l5.value.offsetTop;
-    c6left.value = l6.value.offsetLeft;
-    c6top.value = l6.value.offsetTop;
-    c7left.value = l7.value.offsetLeft;
-    c7top.value = l7.value.offsetTop;
-    c8left.value = l8.value.offsetLeft;
-    c8top.value = l8.value.offsetTop;
-    c9left.value = l9.value.offsetLeft;
-    c9top.value = l9.value.offsetTop;
+  if ( !window.matchMedia("(pointer: coarse)").matches ) {
+    setTimeout(() => {
+      c2left.value = l2.value.offsetLeft;
+      c2top.value = l2.value.offsetTop;
+      c3left.value = l3.value.offsetLeft;
+      c3top.value = l3.value.offsetTop;
+      c4left.value = l4.value.offsetLeft;
+      c4top.value = l4.value.offsetTop;
+      c5left.value = l5.value.offsetLeft;
+      c5top.value = l5.value.offsetTop;
+      c6left.value = l6.value.offsetLeft;
+      c6top.value = l6.value.offsetTop;
+      c7left.value = l7.value.offsetLeft;
+      c7top.value = l7.value.offsetTop;
+      c8left.value = l8.value.offsetLeft;
+      c8top.value = l8.value.offsetTop;
+      c9left.value = l9.value.offsetLeft;
+      c9top.value = l9.value.offsetTop;
 
-    if ( section.value ) {
-      section.value.addEventListener('mousemove', onMouseMove);
-    }
-  }, 500)
+      if ( section.value ) {
+        section.value.addEventListener('mousemove', onMouseMove);
+      }
+    }, 500)
+  }
 });
 
 onUnmounted(() => {
@@ -94,31 +97,31 @@ onUnmounted(() => {
       </div>
     </div>
     <div class="layer-bg w-100">
-      <img class="img-fluid w-100" src="../assets/images/illustrations/leaf-bg.png" alt="bg-shape">
+      <img src="../assets/images/illustrations/leaf-bg.png" class="img-fluid w-100" alt="bg-shape" />
     </div>
     <div class="layer" id="l2" ref="l2">
-      <img src="../assets/images/illustrations/dots-cyan.png" alt="bg-shape">
+      <img src="../assets/images/illustrations/dots-cyan.png" alt="bg-shape" />
     </div>
     <div class="layer" id="l3" ref="l3">
-      <img src="../assets/images/illustrations/leaf-orange.png" alt="bg-shape">
+      <img src="../assets/images/illustrations/leaf-orange.png" alt="bg-shape" />
     </div>
     <div class="layer" id="l4" ref="l4">
-      <img src="../assets/images/illustrations/dots-orange.png" alt="bg-shape">
+      <img src="../assets/images/illustrations/dots-orange.png" alt="bg-shape" />
     </div>
     <div class="layer" id="l5" ref="l5">
-      <img src="../assets/images/illustrations/leaf-yellow.png" alt="bg-shape">
+      <img src="../assets/images/illustrations/leaf-yellow.png" alt="bg-shape" />
     </div>
     <div class="layer" id="l6" ref="l6">
-      <img src="../assets/images/illustrations/leaf-cyan.png" alt="bg-shape">
+      <img src="../assets/images/illustrations/leaf-cyan.png" alt="bg-shape" />
     </div>
     <div class="layer" id="l7" ref="l7">
-      <img src="../assets/images/illustrations/dots-group-orange.png" alt="bg-shape">
+      <img src="../assets/images/illustrations/dots-group-orange.png" alt="bg-shape" />
     </div>
     <div class="layer" id="l8" ref="l8">
-      <img src="../assets/images/illustrations/leaf-pink-round.png" alt="bg-shape">
+      <img src="../assets/images/illustrations/leaf-pink-round.png" alt="bg-shape" />
     </div>
     <div class="layer" id="l9" ref="l9">
-      <img src="../assets/images/illustrations/leaf-cyan-2.png" alt="bg-shape">
+      <img src="../assets/images/illustrations/leaf-cyan-2.png" alt="bg-shape" />
     </div>
     <!-- social icon -->
     <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
@@ -138,3 +141,8 @@ onUnmounted(() => {
     <!-- /social icon -->
   </section>
 </template>
+<style scoped>
+.hero-area {
+  max-width: 100vw;
+}
+</style>

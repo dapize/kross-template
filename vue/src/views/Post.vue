@@ -1,5 +1,7 @@
 <script setup>
+import { format } from 'date-fns'
 import { ref } from 'vue';
+
 import PageTitle from '@/components/PageTitle.vue';
 import Comments from '@/components/Comments.vue';
 
@@ -83,7 +85,7 @@ const sendComment = ( data ) => {
   const newComment = {
     author: firstName + ' ' + lastName,
     content: message,
-    date: '15 january 2015 At 10:30 pm',
+    date: format(new Date(), "i MMM y 'At' h:m aaa"),
     avatar: Avatar1
   };
   comments.value = [ ...comments.value, newComment]
@@ -101,7 +103,7 @@ const sendComment = ( data ) => {
             Published on {{date}} by <span class="text-primary">{{author}}</span> on <span>{{category}}</span>
           </p>
           <div class="content">
-            <img :src="image" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            <img :src="image" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4" />
             <div v-html="content"></div>
           </div>
         </div>

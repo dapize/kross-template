@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
+
 const links = [
   { to: '/', name: 'Home' },
   { to: '/about', name: 'About' },
@@ -39,7 +40,7 @@ onUnmounted(() => {
   <header class="navigation fixed-top" :class="navBg ? 'nav-bg' : ''" ref="main" id="main-header">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <router-link to="/" class="navbar-brand font-tertiary h3">
-        <img src="../assets/images/logo.png" alt="Myself">
+        <img src="../assets/images/logo.png" alt="Myself" />
       </router-link>
       <button
         class="navbar-toggler"

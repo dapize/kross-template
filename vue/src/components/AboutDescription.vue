@@ -14,9 +14,9 @@
         </div>
         <div class="col-md-4 text-center drag-lg-top">
           <div class="shadow-down mb-4">
-            <img src="../assets/images/about/author.jpg" alt="author" class="img-fluid w-100 rounded-lg border-thick border-white">
+            <img src="../assets/images/about/author.jpg" alt="author" class="img-fluid w-100 rounded-lg border-thick border-white" />
           </div>
-          <img src="../assets/images/about/signature.png" alt="signature" class="img-fluid">
+          <img src="../assets/images/about/signature.png" alt="signature" class="img-fluid" />
           <h4>Johnathan Smith</h4>
         </div>
       </div>
