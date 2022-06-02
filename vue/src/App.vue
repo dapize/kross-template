@@ -12,7 +12,6 @@ import Header from "./components/Header.vue";
 </template>
 
 <style>
-/* @import './assets/css/vendors/bootstrap.min.css'; */
 @import'~bootstrap/dist/css/bootstrap.css';
 @import './assets/css/styles.css';
 @import './assets/themify-icons/themify-icons.css';

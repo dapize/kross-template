@@ -21,7 +21,9 @@
       "@components": ["components"],
       "@components/*": ["components/*"],
       "@services": ["services"],
-      "@services/*": ["services/*"]
+      "@services/*": ["services/*"],
+      "@assets": ["public/assets"],
+      "@assets/*": ["public/assets/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
