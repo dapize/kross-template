@@ -1,11 +1,10 @@
-import { StaticImageData } from "next/image";
-
-export interface IClients {
-  title?: boolean;
-}
-
 export interface ILogo {
-  image: StaticImageData,
+  image: string,
   width: number;
   height: number;
+}
+
+export interface Props {
+  title?: boolean;
+  logos: ILogo[];
 }

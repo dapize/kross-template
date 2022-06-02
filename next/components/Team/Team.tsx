@@ -1,19 +1,10 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { FC } from 'react'
 
 import Styles from './Team.module.css';
-import { IMember } from './Team.d';
-import Member1 from '@assets/images/team/member-1.png';
-import Member2 from '@assets/images/team/member-2.png';
-import Member3 from '@assets/images/team/member-3.png';
+import { IMember, Props } from './Team.d';
 
-export const Team = () => {
-  const members: IMember[] = [
-    { name: 'Jack Schenziwe', role: 'Project Manager', image: Member1 },
-    { name: 'Jack Schenziwe', role: 'Project Manager', image: Member2 },
-    { name: 'Jack Schenziwe', role: 'Project Manager', image: Member3 }
-  ]
-
+export const Team: FC<Props> = ({ members }) => {
   return (
     <section className={`section bg-cover ${Styles.bgSection}`}>
       <div className="container">

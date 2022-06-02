@@ -1,2 +1,2 @@
 export { Experience } from './Experience';
-export type { IExperience } from './Experience.d';
+export type { IExperience, Props } from './Experience.d';

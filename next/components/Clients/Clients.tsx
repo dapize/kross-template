@@ -5,13 +5,8 @@ import { Autoplay } from 'swiper'
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-import { IClients, ILogo } from './Clients.d';
+import { Props, ILogo } from './Clients.d';
 
-import logo1 from '@assets/images/clients-logo/client-logo-1.png';
-import logo2 from '@assets/images/clients-logo/client-logo-2.png';
-import logo3 from '@assets/images/clients-logo/client-logo-3.png';
-import logo4 from '@assets/images/clients-logo/client-logo-4.png';
-import logo5 from '@assets/images/clients-logo/client-logo-5.png';
 
 const settings = {
   breakpoints: {
@@ -34,19 +29,7 @@ const settings = {
 
 const modules = [Autoplay];
 
-export const Clients: FC<IClients> = ({ title = false }) => {
-  const logos: ILogo[] = [
-    { image: logo1, width: 139, height: 25 },
-    { image: logo2, width: 144, height: 36 },
-    { image: logo3, width: 113, height: 35 },
-    { image: logo4, width: 118, height: 30 },
-    { image: logo5, width: 121, height: 43 },
-    { image: logo1, width: 139, height: 25 },
-    { image: logo2, width: 144, height: 36 },
-    { image: logo3, width: 113, height: 35 },
-    { image: logo4, width: 118, height: 30 },
-    { image: logo5, width: 121, height: 43 },
-  ];
+export const Clients: FC<Props> = ({ title = false, logos }) => {
   const [isSSR, setIsSSR] = useState<boolean>(true);
 
   useEffect(() => {
@@ -74,7 +57,7 @@ export const Clients: FC<IClients> = ({ title = false }) => {
                     {
                       logos.map((logo: ILogo, index: number) => (
                         <SwiperSlide
-                          key={`${logo.image.src}-${index}`}
+                          key={`${logo.image}-${index}`}
                           className="text-center d-block outline-0 p-4"
                         >
                           <Image className="d-unset img-fluid" src={logo.image} alt="client-logo" width={logo.width} height={logo.height} layout="raw"/>

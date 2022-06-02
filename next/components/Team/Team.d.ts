@@ -1,7 +1,9 @@
-import { StaticImageData } from 'next/image';
-
 export interface IMember {
   name: string;
   role: string;
-  image: StaticImageData;
+  image: string;
+}
+
+export interface Props {
+  members: IMember[]
 }

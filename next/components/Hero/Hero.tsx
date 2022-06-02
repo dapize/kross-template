@@ -1,4 +1,4 @@
-import React, { useRef, useState, MouseEvent, useEffect } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Image from 'next/image';
 
 import lefBg from '@assets/images/illustrations/leaf-bg.png';
@@ -34,7 +34,7 @@ export const Hero = () => {
   const l9 = useRef<null | HTMLDivElement>(null);
   const [positions, setPositions] = useState<IPositions | null>(null)
 
-  const onMouseMoveSection = (e: MouseEvent<HTMLElement>) => {
+  const onMouseMoveSection = (e: MouseEvent) => {
     if ( window.matchMedia("(pointer: coarse)").matches ) return;
     const event = e || window.event;
     const x = event.clientX - (section.current as HTMLElement).offsetLeft;
@@ -52,35 +52,51 @@ export const Hero = () => {
 
   useEffect(() => {
     if ( !window.matchMedia("(pointer: coarse)").matches ) {
-      const getPositions = {
-        c2left: (l2.current as HTMLDivElement).offsetLeft,
-        c2top: (l2.current as HTMLDivElement).offsetTop,
-        c3left: (l3.current as HTMLDivElement).offsetLeft,
-        c3top: (l3.current as HTMLDivElement).offsetTop,
-        c4left: (l4.current as HTMLDivElement).offsetLeft,
-        c4top: (l4.current as HTMLDivElement).offsetTop,
-        c5left: (l5.current as HTMLDivElement).offsetLeft,
-        c5top: (l5.current as HTMLDivElement).offsetTop,
-        c6left: (l6.current as HTMLDivElement).offsetLeft,
-        c6top: (l6.current as HTMLDivElement).offsetTop,
-        c7left: (l7.current as HTMLDivElement).offsetLeft,
-        c7top: (l7.current as HTMLDivElement).offsetTop,
-        c8left: (l8.current as HTMLDivElement).offsetLeft,
-        c8top: (l8.current as HTMLDivElement).offsetTop,
-        c9left: (l9.current as HTMLDivElement).offsetLeft,
-        c9top: (l9.current as HTMLDivElement).offsetTop
-      };
-      setPositions(getPositions);
+      setTimeout(() => {
+        const getPositions = {
+          c2left: (l2.current as HTMLDivElement).offsetLeft,
+          c2top: (l2.current as HTMLDivElement).offsetTop,
+          c3left: (l3.current as HTMLDivElement).offsetLeft,
+          c3top: (l3.current as HTMLDivElement).offsetTop,
+          c4left: (l4.current as HTMLDivElement).offsetLeft,
+          c4top: (l4.current as HTMLDivElement).offsetTop,
+          c5left: (l5.current as HTMLDivElement).offsetLeft,
+          c5top: (l5.current as HTMLDivElement).offsetTop,
+          c6left: (l6.current as HTMLDivElement).offsetLeft,
+          c6top: (l6.current as HTMLDivElement).offsetTop,
+          c7left: (l7.current as HTMLDivElement).offsetLeft,
+          c7top: (l7.current as HTMLDivElement).offsetTop,
+          c8left: (l8.current as HTMLDivElement).offsetLeft,
+          c8top: (l8.current as HTMLDivElement).offsetTop,
+          c9left: (l9.current as HTMLDivElement).offsetLeft,
+          c9top: (l9.current as HTMLDivElement).offsetTop
+        };
+        setPositions(getPositions);
+      }, 500)
+    }
+
+    return () => {
+      const mainSection = section.current as HTMLElement;
+      if ( mainSection ) {
+        mainSection.removeEventListener('mousemove', onMouseMoveSection )
+      }
     }
   }, [])
 
+  useEffect(() => {
+    const mainSection = section.current as HTMLElement;
+    if ( mainSection && positions ) {
+      setTimeout(() => {
+        mainSection.addEventListener('mousemove', onMouseMoveSection )
+      }, 500)
+    }
+  }, [ positions ])
 
   return (
     <section
       className={`hero-area bg-primary ${Styles.section}`}
       id="parallax"
       ref={section}
-      onMouseMove={onMouseMoveSection}
     >
       <div className="container">
         <div className="row">

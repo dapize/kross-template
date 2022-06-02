@@ -1,15 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-import { ISkill } from './Skills.d';
+import { ISkill, ISkillsProps } from './Skills.d';
 
-export const Skills = () => {
-  const list: ISkill[] = [
-    { title: 'Web Design', percentage: 90, color: '#fdb157' },
-    { title: 'Logo Design', percentage: 60, color: '#9473e6' },
-    { title: 'After Effects', percentage: 80, color: '#bdecf6' },
-    { title: 'Web App', percentage: 70, color: '#ffbcaa' },
-  ]
-
+export const Skills: FC<ISkillsProps> = ({ list }) => {
   return (
     <section className="section">
       <div className="container">

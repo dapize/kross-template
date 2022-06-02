@@ -3,3 +3,7 @@ export interface ILearning {
   year: number;
   institution: string;
 }
+
+export interface IEducation {
+  list: ILearning[]
+}

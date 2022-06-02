@@ -1,2 +1,2 @@
 export { Clients } from './Clients';
-export type { IClients } from './Clients.d';
+export type { ILogo, Props } from './Clients.d';
