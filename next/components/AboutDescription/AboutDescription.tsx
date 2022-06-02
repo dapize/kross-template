@@ -1,7 +1,4 @@
 import React from 'react'
-
-import Author from '@assets/images/about/author.jpg';
-import Signature from '@assets/images/about/signature.png';
 import Image from 'next/image';
 
 export const AboutDescription = () => {
@@ -21,9 +18,9 @@ export const AboutDescription = () => {
           </div>
           <div className="col-md-4 text-center drag-lg-top">
             <div className="shadow-down mb-4">
-              <Image src={Author} alt="author" className="img-fluid w-100 rounded-lg border-thick border-white" layout="raw" width={467} height={545}/>
+              <Image src="/assets/images/about/author.jpg" alt="author" className="img-fluid w-100 rounded-lg border-thick border-white" layout="raw" width={467} height={545}/>
             </div>
-            <Image src={Signature} alt="signature" className="img-fluid" layout="raw" width={172} height={88}/>
+            <Image src="/assets/images/about/signature.png" alt="signature" className="img-fluid" layout="raw" width={172} height={88}/>
             <h4>Johnathan Smith</h4>
           </div>
         </div>

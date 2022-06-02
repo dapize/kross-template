@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React, { FC } from 'react'
 
 import { IEducation, ILearning } from './Education.d';
-import EducationBg from '@assets/images/backgrounds/education-bg.png'
 
 export const Education: FC<IEducation> = ({ list }) => {
   return (
@@ -30,7 +29,7 @@ export const Education: FC<IEducation> = ({ list }) => {
           }
         </div>
       </div>
-      <Image src={EducationBg} className="img-fluid edu-bg-image w-100" alt="bg-image" layout="raw" width={1595} height={1199}/>
+      <Image src="/assets/images/backgrounds/education-bg.png" className="img-fluid edu-bg-image w-100" alt="bg-image" layout="raw" width={1595} height={1199}/>
     </section>
   )
 }

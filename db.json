@@ -1,0 +1,179 @@
+{
+  "clients": {
+    "logos": [
+      {
+        "image": "/assets/images/clients-logo/client-logo-1.png",
+        "width": 139,
+        "height": 25
+      },
+      {
+        "image": "/assets/images/clients-logo/client-logo-2.png",
+        "width": 144,
+        "height": 36
+      },
+      {
+        "image": "/assets/images/clients-logo/client-logo-3.png",
+        "width": 113,
+        "height": 35
+      },
+      {
+        "image": "/assets/images/clients-logo/client-logo-4.png",
+        "width": 118,
+        "height": 30
+      },
+      {
+        "image": "/assets/images/clients-logo/client-logo-5.png",
+        "width": 121,
+        "height": 43
+      },
+      {
+        "image": "/assets/images/clients-logo/client-logo-1.png",
+        "width": 139,
+        "height": 25
+      },
+      {
+        "image": "/assets/images/clients-logo/client-logo-2.png",
+        "width": 144,
+        "height": 36
+      },
+      {
+        "image": "/assets/images/clients-logo/client-logo-3.png",
+        "width": 113,
+        "height": 35
+      },
+      {
+        "image": "/assets/images/clients-logo/client-logo-4.png",
+        "width": 118,
+        "height": 30
+      },
+      {
+        "image": "/assets/images/clients-logo/client-logo-5.png",
+        "width": 121,
+        "height": 43
+      }
+    ]
+  },
+  "contact": {
+    "message": "Contact Sent"
+  },
+  "experiences": {
+    "list": [
+      {
+        "period": "Jan 2007 - Feb 2009",
+        "title": "Junior UX Designer",
+        "company": "WEBEX",
+        "icon": "/assets/images/experience/icon-1.png"
+      },
+      {
+        "period": "Mar 2009 - Aug 2014",
+        "title": "UX & UI Designer",
+        "company": "AUGMEDIX",
+        "icon": "/assets/images/experience/icon-2.png"
+      },
+      {
+        "period": "Sep 2014 - Present",
+        "title": "Senior UI Designer",
+        "company": "THEMEFISHER",
+        "icon": "/assets/images/experience/icon-3.png"
+      }
+    ]
+  },
+  "learnings": {
+    "list": [
+      {
+        "title": "Marters in UX Design",
+        "year": 2006,
+        "institution": "Masassusets Institute of Technology"
+      },
+      {
+        "title": "Honours in Fine Arts",
+        "year": 2004,
+        "institution": "Harvard University"
+      },
+      {
+        "title": "Higher Secondary Certificat",
+        "year": 2000,
+        "institution": "Cardiff School"
+      },
+      {
+        "title": "Secondary School Certificate",
+        "year": 1998,
+        "institution": "Cardiff School"
+      }
+    ]
+  },
+  "skills": {
+    "list": [
+      {
+        "title": "Web Design",
+        "percentage": 90,
+        "color": "#fdb157"
+      },
+      {
+        "title": "Logo Design",
+        "percentage": 60,
+        "color": "#9473e6"
+      },
+      {
+        "title": "After Effects",
+        "percentage": 80,
+        "color": "#bdecf6"
+      },
+      {
+        "title": "Web App",
+        "percentage": 70,
+        "color": "#ffbcaa"
+      }
+    ]
+  },
+  "team": {
+    "members": [
+      {
+        "name": "Jack Schenziwe",
+        "role": "Project Manager",
+        "image": "/assets/images/team/member-1.png"
+      },
+      {
+        "name": "Jack Schenziwe",
+        "role": "Project Manager",
+        "image": "/assets/images/team/member-2.png"
+      },
+      {
+        "name": "Jack Schenziwe",
+        "role": "Project Manager",
+        "image": "/assets/images/team/member-3.png"
+      }
+    ]
+  },
+  "workprocess": {
+    "list": [
+      {
+        "title": "Research and Plan",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "icon": {
+          "image": "/assets/images/icons/plan.png",
+          "width": 57,
+          "height": 59
+        }
+      },
+      {
+        "title": "Design and Develop",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "icon": {
+          "image": "/assets/images/icons/design.png",
+          "width": 49,
+          "height": 49
+        }
+      },
+      {
+        "title": "Deliver",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "icon": {
+          "image": "/assets/images/icons/print.png",
+          "width": 60,
+          "height": 43
+        }
+      }
+    ]
+  }
+}

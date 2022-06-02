@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import Logo from '@assets/images/logo.png';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ILink } from './Header.d';
@@ -47,7 +46,7 @@ export const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-dark">
         <Link href="/">
           <a className="navbar-brand font-tertiary h3">
-            <Image src={Logo} alt="Myself" width={77} height={35} layout="raw" />
+            <Image src="/assets/images/logo.png" alt="Myself" width={77} height={35} layout="raw" />
           </a>
         </Link>
         <button

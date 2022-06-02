@@ -16,7 +16,7 @@ export const Team: FC<Props> = ({ members }) => {
             members.map( (member: IMember, index: number) => (
               <div className="col-md-4 col-sm-6 mb-4 mb-md-0" key={`${member.name}-${index}`}>
                 <div className="card text-center">
-                  <Image src={member.image} className="card-img-top" layout="raw" width={368} height={376} />
+                  <Image src={member.image} className="card-img-top" layout="raw" width={368} height={376} alt={member.name} />
                   <div className="card-body">
                     <h4 className="card-title">{member.name}</h4>
                     <p className="text-light font-secondary">{member.role}</p>
