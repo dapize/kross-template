@@ -47,7 +47,7 @@ export const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-dark">
         <Link href="/">
           <a className="navbar-brand font-tertiary h3">
-            <Image src={Logo} alt="Myself" width={77} height={35} />
+            <Image src={Logo} alt="Myself" width={77} height={35} layout="raw" />
           </a>
         </Link>
         <button
@@ -65,8 +65,8 @@ export const Header = () => {
         <div className={`collapse navbar-collapse text-center ${menuOpened && 'show'}`} id="navigation">
           <ul className="navbar-nav ml-auto">
             {
-              links.map( (item: ILink ) => (
-                <li className={`nav-item ${ router.pathname === item.to ? 'active' : '' }`} key={item.name}>
+              links.map( (item: ILink, index: number ) => (
+                <li className={`nav-item ${ router.pathname === item.to ? 'active' : '' }`} key={`${item.name}-${index}`}>
                   <Link href={item.to}>
                     <a className="nav-link" onClick={toggleMenu}>{item.name}</a>
                   </Link>

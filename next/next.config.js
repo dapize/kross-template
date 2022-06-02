@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  env: {
+    BASE_URL: process.env.BASE_URL,
+  },
+  experimental: {
+    images: {
+      layoutRaw: true
+    }
+  }
 }
 
 module.exports = nextConfig
