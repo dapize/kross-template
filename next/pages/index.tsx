@@ -1,6 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Hero } from '@components/Hero'
+import { PreAbout } from '@components/PreAbout'
+import { Skills } from '@components/Skills'
+import { Experience } from '@components/Experience'
+import { Education } from '@components/Education'
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +15,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <PreAbout/>
+      <Skills/>
+      <Experience/>
+      <Education/>
     </>
   )
 }

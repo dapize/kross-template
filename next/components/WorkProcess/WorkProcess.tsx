@@ -16,7 +16,7 @@ export const WorkProcess = () => {
       icon: {
         image: Plan,
         width: 57,
-        height: 49
+        height: 59
       }
     },
     {
