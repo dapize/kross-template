@@ -14,13 +14,19 @@ import { services } from '@services/services';
 import { IService, Services } from '@components/Services';
 import { projects } from '@services/projects';
 import { IProject, Portfolio } from '@components/Portfolio';
+import { ITestimonial, Testimonials } from '@components/Testimonials';
+import { testimonials } from '@services/testimonials';
+import { Clients, ILogo } from '@components/Clients';
+import { clients } from '@services/clients';
 
 interface IHome {
   skills: ISkill[];
   experiences: IExperience[];
   learnings: ILearning[];
   services: IService[];
-  projects: IProject[]
+  projects: IProject[];
+  testimonials: ITestimonial[];
+  clientLogos: ILogo[];
 }
 
 const Home: NextPage<IHome> = ({
@@ -28,7 +34,9 @@ const Home: NextPage<IHome> = ({
   experiences: experiencesList,
   learnings: learningsList,
   services: servicesList,
-  projects
+  projects,
+  testimonials: testimonialList,
+  clientLogos
 }) => {
   return (
     <>
@@ -43,10 +51,11 @@ const Home: NextPage<IHome> = ({
       <Education list={learningsList}/>
       <Services list={servicesList}/>
       <Portfolio projects={projects}/>
+      <Testimonials list={testimonialList}/>
+      <Clients logos={clientLogos}/>
     </>
   )
 }
-
 
 export const getStaticProps: GetStaticProps = async () => {
   const getSkills = await skills();
@@ -54,6 +63,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const getLearnings = await learnings();
   const getServices = await services();
   const getProjects = await projects();
+  const getTestimonials = await testimonials();
+  const getClients = await clients();
 
   return {
     props: {
@@ -61,7 +72,9 @@ export const getStaticProps: GetStaticProps = async () => {
       experiences: getExperiences.data.list,
       learnings: getLearnings.data.list,
       services: getServices.data.list,
-      projects: getProjects.data.list
+      projects: getProjects.data.list,
+      testimonials: getTestimonials.data.list,
+      clientLogos: getClients.data.logos
     }
   }
 }
