@@ -1,51 +1,45 @@
-import React from 'react'
-import Image from 'next/image'
+import React, { useState, useEffect } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import Head from 'next/head'
 
 import { post } from '@services/post'
 import { PageTitle } from '@components/PageTitle'
+import { Post } from '@components/Post'
+import { IPost } from '@components/Post'
+import { Comments, INewComment } from '@components/Comments'
 
-import { IParams, IPost } from './post.d'
-import Head from 'next/head'
+import { IParams } from './post.d'
 
-const Post: NextPage<IPost> = ({
-  title,
-  image,
-  date,
-  author,
-  category,
-  content,
-}) => {
+const PostPage: NextPage<IPost> = (props) => {
+  const [comments, setComments] = useState([]);
+
+  const handleNewComment = ( comment: INewComment ) => {
+
+  }
+
+  useEffect(() => {
+    //first
+
+    return () => {
+      //second
+    }
+  }, [])
+
+
   return (
     <>
       <Head>
-        <title>{title} | Kross Creative Template {'>'} Blog</title>
+        <title>{props.title} | Kross Creative Template {'>'} Blog</title>
       </Head>
       <PageTitle align="center">Blogs</PageTitle>
       <a id="post"></a>
-      <section className="section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <h3 className="font-tertiary mb-3">{title}</h3>
-              <p className="font-secondary mb-5">
-                Published on {date} by <span className="text-primary">{author}</span> on <span>{category}</span>
-              </p>
-              <div className="content">
-                <Image
-                  src={image}
-                  alt="post-thumb"
-                  className="img-fluid rounded float-left mr-5 mb-4"
-                  width={402}
-                  height={474}
-                  layout="raw"
-                />
-                <div dangerouslySetInnerHTML={{ __html: content }}></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Post { ...props }/>
+      { comments.length && (
+        <Comments
+          list={comments}
+          onCommentAdded={handleNewComment}
+        />
+      )}
     </>
   )
 }
@@ -75,4 +69,4 @@ export const getStaticPaths: GetStaticPaths = () => {
   }
 }
 
-export default Post
+export default PostPage

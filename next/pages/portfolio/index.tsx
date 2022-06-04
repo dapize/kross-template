@@ -22,7 +22,7 @@ const PortfolioPage: NextPage<IPortfolio> = ({
       </Head>
       <PageTitle align="center">Portfolio</PageTitle>
       <Portfolio projects={projects} title={false} filters={filters}/>
-      <Clients logos={clientLogos}/>
+      <Clients logos={clientLogos} title/>
     </>
   )
 }

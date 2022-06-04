@@ -55,16 +55,6 @@ export const Portfolio: FC<IPortfolio> = ({ title = true, filters = false, proje
           }
         </div>
       </div>
-      <style jsx>{`
-        @media screen and (max-width: 479px) {
-          .btn-primary {
-            font-size:  13px;
-            padding-left: 20px;
-            padding-right: 20px;
-          }
-        }
-      `}
-      </style>
     </section>
   )
 }

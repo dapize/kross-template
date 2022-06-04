@@ -1,8 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { IPost } from 'pages/blog/[post]/post.d'
+import { IPost } from '@components/Post'
 
 export default function handler( req: NextApiRequest, res: NextApiResponse<IPost> ) {
   res.status(200).json({
+    id: 1,
     title: 'What should be the proper purpose of UI and UX design?',
     image: '/assets/images/blog/post-1.jpg',
     date: 'May 26, 2017',
