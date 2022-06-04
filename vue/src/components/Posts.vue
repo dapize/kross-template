@@ -53,9 +53,9 @@ const posts = [
             <img :src="post.image" class="rounded card-img-top" alt="post-thumb" />
             <div class="card-body">
               <h4 class="card-title">
-                <a class="text-dark" href="blog-single.html">
+                <router-link :to="{ path: `/blog/${post.url}`, hash: '#post'}" class="text-dark">
                   {{ post.title }}
-                </a>
+                </router-link>
               </h4>
               <p class="cars-text">{{ post.description }}</p>
               <router-link :to="{ path: `/blog/${post.url}`, hash: '#post'}" class="btn btn-xs btn-primary">Read More</router-link>
