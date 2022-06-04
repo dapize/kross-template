@@ -59,9 +59,6 @@ export const Testimonials: FC<ITestimonials> = ({ list }) => {
         <Image src="/assets/images/illustrations/leaf-cyan.png" alt="bg-shape" className="img-fluid bg-shape-5" layout="raw" width={169} height={96}/>
       </section>
       <style global jsx>{`
-        body {
-          color: red !important;
-        }
         .swiper-pagination {
           text-align: center;
           padding-left: 0;
