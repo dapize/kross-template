@@ -6,9 +6,6 @@ export interface IComment {
   content: string;
 }
 
-export interface INewComment extends Omit<IComment, 'id'>{}
-
 export interface IComments {
-  list: IComment[];
-  onCommentAdded: (data: INewComment) => void;
+  postId: number;
 }
