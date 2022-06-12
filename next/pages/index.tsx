@@ -42,7 +42,6 @@ const Home: NextPage<IHome> = ({
     <>
       <Head>
         <title>Kross Creative Template</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
       <PreAbout/>
