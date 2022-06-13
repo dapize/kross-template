@@ -18,7 +18,7 @@ export const FormComment: FC<IFormComment> = ({ onCommentAdded }) => {
     resolver: joiResolver(schema),
   })
 
-  const { isLoading, mutate, isSuccess } = useMutation( comment, {
+  const { isLoading, mutate } = useMutation( comment, {
     onSuccess: ( { data } ) => {
       toast.success(data.message);
 
