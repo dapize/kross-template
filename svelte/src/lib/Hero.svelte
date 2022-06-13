@@ -133,16 +133,16 @@
   <!-- social icon -->
   <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
     <li class="mb-3">
-      <a class="text-white" href="https://themefisher.com/"><i class="ti-facebook"></i></a>
+      <a class="text-white" rel="external" href="https://themefisher.com/"><i class="ti-facebook"></i></a>
     </li>
     <li class="mb-3">
-      <a class="text-white" href="https://themefisher.com/"><i class="ti-instagram"></i></a>
+      <a class="text-white" rel="external" href="https://themefisher.com/"><i class="ti-instagram"></i></a>
     </li>
     <li class="mb-3">
-      <a class="text-white" href="https://themefisher.com/"><i class="ti-dribbble"></i></a>
+      <a class="text-white" rel="external" href="https://themefisher.com/"><i class="ti-dribbble"></i></a>
     </li>
     <li class="mb-3">
-      <a class="text-white" href="https://themefisher.com/"><i class="ti-twitter"></i></a>
+      <a class="text-white" rel="external" href="https://themefisher.com/"><i class="ti-twitter"></i></a>
     </li>
   </ul>
   <!-- /social icon -->

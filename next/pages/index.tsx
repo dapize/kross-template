@@ -6,17 +6,17 @@ import { PreAbout } from '@components/PreAbout'
 import { ISkill, Skills } from '@components/Skills'
 import { Experience, IExperience } from '@components/Experience'
 import { Education, ILearning } from '@components/Education'
+import { IService, Services } from '@components/Services';
+import { IProject, Portfolio } from '@components/Portfolio';
+import { ITestimonial, Testimonials } from '@components/Testimonials';
+import { Clients, ILogo } from '@components/Clients';
 
 import { skills } from '@services/skills';
 import { experiences } from '@services/experiences';
 import { learnings } from '@services/learnings';
 import { services } from '@services/services';
-import { IService, Services } from '@components/Services';
 import { projects } from '@services/projects';
-import { IProject, Portfolio } from '@components/Portfolio';
-import { ITestimonial, Testimonials } from '@components/Testimonials';
 import { testimonials } from '@services/testimonials';
-import { Clients, ILogo } from '@components/Clients';
 import { clients } from '@services/clients';
 
 interface IHome {

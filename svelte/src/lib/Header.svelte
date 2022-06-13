@@ -9,9 +9,9 @@
   const links: ILink[] = [
     { href: '/', name: 'Home' },
     { href: '/about', name: 'About' },
-    { href: '/blog', name: 'Blog' },
-    { href: '/portfolio', name: 'Portfolio' },
-    { href: '/contact', name: 'Contact' }
+    { href: '/about', name: 'Blog' },
+    { href: '/about', name: 'Portfolio' },
+    { href: '/about', name: 'Contact' }
   ];
 
   let menuOpened = false;
@@ -55,6 +55,7 @@
       aria-controls="navigation"
       aria-expanded={menuOpened}
       aria-label="Toggle navigation"
+      on:click={openMenu}
     >
       <span class="navbar-toggler-icon"></span>
     </button>

@@ -22,6 +22,6 @@
     </div>
   </div>
   <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Copyright &copy;{ currentYear } Designed &amp; Developed by <a class="text-white-50" href="Themefisher">Themefisher</a></p>
+    <p class="mb-0 text-light">Copyright &copy;{ currentYear } Designed &amp; Developed by <a rel="external" class="text-white-50" href="Themefisher">Themefisher</a></p>
   </div>
 </footer>
