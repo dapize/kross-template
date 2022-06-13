@@ -9,9 +9,9 @@
   const links: ILink[] = [
     { href: '/', name: 'Home' },
     { href: '/about', name: 'About' },
-    { href: '/about', name: 'Blog' },
-    { href: '/about', name: 'Portfolio' },
-    { href: '/about', name: 'Contact' }
+    { href: '/blog', name: 'Blog' },
+    { href: '/portfolio', name: 'Portfolio' },
+    { href: '/contact', name: 'Contact' }
   ];
 
   let menuOpened = false;

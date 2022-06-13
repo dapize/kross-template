@@ -60,7 +60,7 @@
         <div class="col-12">
           <div class="btn-group btn-group-toggle justify-content-center d-flex" data-toggle="buttons">
             {#each filterItems as { active, value, title }}
-              <label class={`btn btn-sm btn-primary ${active && 'active'}`}>
+              <label class="btn btn-sm btn-primary" class:active>
                 <input type="radio" name="shuffle-filter" value={value} checked={active} on:change={onChangeHandler} /> { title }
               </label>
             {/each}
