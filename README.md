@@ -4,7 +4,7 @@
 This is a repositry for storage the free template getted from [Theme Fisher](https://themefisher.com/) but developed in the nexts frameworks JS:
 - [Vue JS](https://github.com/vuejs/core) - ✅ Done - [Link](https://kross-creative.netlify.app)
 - [React JS](https://reactjs.org/) + [Next JS](https://nextjs.org/) - ✅ Done - [Link](https://kross-creative.vercel.app)
-- [Svelte JS](https://svelte.dev/) - 🏗️ In Progress - [Link](https://kross-creative.up.railway.app/)
+- [Svelte JS](https://svelte.dev/) + [SvelteKit](https://kit.svelte.dev/) - ✅ Done - [Link](https://kross-creative.up.railway.app/)
 
 Thank you to Theme Fisher for develop the [HTML version](https://themefisher.com/products/kross-creative-portfolio-template/)
 
